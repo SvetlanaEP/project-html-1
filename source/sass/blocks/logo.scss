@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  height: 58px;
+  padding: 14px 105px 15px 0px;
+  align-items: center;
+  box-sizing: border-box;
+
+  color: #FFF;
+  text-align: center;
+
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 54px */
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  img {
+    display: block;
+  }
+}
