@@ -1,94 +1,110 @@
 .promo {
+  margin-top: 108px ;
   color: $color-white;
   text-align: center;
-  height: 302px;
-  margin-bottom: 145px;
-
-  @media (max-width: $only-mobile-width) {
-    background: $basic-green;
-    background: url("../../img/background/bg-header--mobile.jpg");
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  height: auto;
 
   @media (min-width: $tablet-width) {
-    height: auto;
     margin-bottom: 0;
-    color: $color-black;
+    color: $color-white;
     background: transparent;
-
     text-align: left;
   }
 }
 
 .promo__container {
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    padding: 62px 207px 526px 87px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    padding: 29px 590px 185px 80px;
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    gap: 50px;
+    align-items: start;
+    max-width: 540px;
   }
 }
 
 .promo__heading {
   display: block;
-  min-height: 72px;
-  margin: 0 0 25px;
-
+  margin: 0;
   font-family: $font-heading;
   font-size: 36px;
   line-height: 1;
   font-weight: $regular;
 
   @media (min-width: $tablet-width) {
-    min-height: 120px;
-    font-size: 60px;
-    line-height: 1;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 80px;
   }
 }
 
 .promo__text {
-  margin: 0 0 29px;
+  margin: 0;
 
   font-family: $font-heading;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: $regular;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+  }
 }
 
 .promo__image {
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-
-    width: 708px;
-    height: 609px;
-  }
+  width: 100%;
+  height: auto;
 
   @media (min-width: $desktop-width) {
-    top: 0;
-    left: calc(50% - 114px);
-
-    width: 552px;
-    height: 499px;
+    margin-top: -128px;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
   }
 }
 
 .promo__button {
-  justify-self: end;
+  width: 100%;
+  max-width: 400px;
 
-  @media (min-width: $tablet-width) {
-    width: 55%;
+  @media (min-width: $desktop-width) {
+    width: 200px;
+  }
+}
+
+.promo__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.promo__item {
+  & + & {
+    margin-top: 24px;
   }
 }

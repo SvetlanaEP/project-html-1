@@ -12,17 +12,10 @@
     display: grid;
     grid-template-columns: 1fr 34px;
     gap: 16px;
+  }
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100vw;
-      height: 1px;
-      background-color: $color-grey;
-
-      left: calc(50% - 50vw);
-      bottom: 0;
-    }
+  @media (min-width: $desktop-width) {
+    width: 50%;
   }
 }
 

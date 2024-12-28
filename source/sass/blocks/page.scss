@@ -16,9 +16,11 @@
   }
 }
 
-.page__body {
-  min-height: 100%;
-  margin: 0;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+
+.page__header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $bg-color;
 }
