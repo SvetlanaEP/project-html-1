@@ -1,18 +1,18 @@
 .logo {
   display: flex;
-  gap: 24px;
-  height: 58px;
+  gap: 16px;
+  height: 32px;
 
   align-items: center;
   box-sizing: border-box;
 
   color: #FFF;
-  text-align: center;
+  text-align: left;
 
-  font-size: 36px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 54px */
+  line-height: 150%;
   letter-spacing: 1.08px;
   text-transform: uppercase;
 
@@ -28,5 +28,24 @@
 
   img {
     display: block;
+  }
+
+  svg {
+    height: 32px;
+    width: 32px;
+    @media (min-width: $tablet-width) {
+      height: 58px;
+      width: 58px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    gap: 24px;
+    height: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
   }
 }

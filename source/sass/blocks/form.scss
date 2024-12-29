@@ -78,11 +78,16 @@
 }
 
 .form-field__input {
-  padding: 14px 38px;
+  padding: 8px 16px;
 
   box-sizing: border-box;
   width: 100%;
-  font-size: 24px;
+  font-size: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 38px;
+    font-size: 24px;
+  }
 }
 
 .form__agree {
@@ -93,6 +98,13 @@
   color: white;
   background: black;
   width: 100%;
+  border: 1px solid black;
+
+  &:hover {
+    color: black;
+    background: transparent;
+    border-color: black;
+  }
 }
 
 .form__button-group {

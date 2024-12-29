@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="en" style="scroll-behavior: smooth;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,7 @@
 
 <main class="page__main page-main">
   <h1 class="visually-hidden">Photographer's website</h1>
-  <header id="main" class="page-main__header promo">
+  <header id="main" class="page-main__header promo section">
     <div class="container">
       <div class="promo__container">
         <div class="promo__content">
@@ -140,13 +140,17 @@
     </div>
   </header>
 
-  <section id="advantages" class="advantages page-main__advantages">
+  <section id="advantages" class="advantages page-main__advantages section">
     <h2 class="visually-hidden">Our advantages</h2>
-    <div class="advantages__img-container">
-      <picture>
-
-        <img class="advantages__image" src="img/img-1.jpg" width="736" height="1011" alt="Изображение">
-      </picture>
+    <div class="advantages__img-container slider">
+      <div class="slider__images">
+        <img class="slider__image" src="img/img-1.jpg" width="736" height="1011" alt="Изображение 1">
+        <img class="slider__image" src="img/img-2.jpg" width="736" height="919" alt="Изображение 2">
+        <img class="slider__image" src="img/img-3.jpg" width="736" height="1011" alt="Изображение 3">
+      </div>
+      <button class="slider__button slider__button--prev" aria-label="Previous">❮</button>
+      <button class="slider__button slider__button--next" aria-label="Next">❯</button>
+      <span class="slider__heading">Outdoor Photograph</span>
     </div>
 
     <div class="advantages__content">
@@ -203,16 +207,20 @@
       </button>
     </div>
 
-    <div class="advantages__img-container">
-      <picture>
-
-        <img class="advantages__image" src="img/img-2.jpg" width="736" height="1011" alt="Изображение">
-      </picture>
+    <div class="advantages__img-container slider">
+      <div class="slider__images">
+        <img class="slider__image" src="img/img-6.jpg" width="736" height="1104" alt="Изображение 1">
+        <img class="slider__image" src="img/img-5.jpg" width="538" height="807" alt="Изображение 2">
+        <img class="slider__image" src="img/img-4.jpg" width="1080" height="1350" alt="Изображение 3">
+      </div>
+      <span class="slider__heading">Studio Shots</span>
+      <button class="slider__button slider__button--prev" aria-label="Previous">❮</button>
+      <button class="slider__button slider__button--next" aria-label="Next">❯</button>
     </div>
 
   </section>
 
-  <section id="order" class="page-main__form form-section container">
+  <section id="order" class="page-main__form form-section container section">
     <h2 class="visually-hidden">Form</h2>
     <div class="form__wrapper">
       <h3 class="form__heading">Request a Callback</h3>
@@ -406,7 +414,7 @@
       </div>
 
       <div class="">
-        <a class="page-footer__link">
+        <a class="page-footer__link privacy-link">
           Privacy policy
         </a>
 
@@ -420,7 +428,7 @@
   </section>
 </footer>
 
-<div  class="form-section form-modal">
+<section  class="form-section modal modal--form">
   <h2 class="visually-hidden">Form</h2>
   <div class="form__wrapper">
     <h3 class="form__heading">Request a Callback</h3>
@@ -444,20 +452,18 @@
         </li>
       </ul>
       <div class="form__button-group">
-        <button class="button form__button form__button--modal form-modal__send" type="button">
+        <button class="button form__button form__button--modal modal__send" type="button">
           Send
         </button>
-        <button class="button form-modal__closed" type="button">
+        <button class="button modal__closed" type="button">
           <span>Closed </span>
         </button>
       </div>
-
-
     </form>
 
 
   </div>
-</div>
+</section>
 
   <script src="./js/app.min.js"></script>
   </body>

@@ -15,6 +15,12 @@
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: $only-mobile-width) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   & > div {
     align-content: center;

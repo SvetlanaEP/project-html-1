@@ -21,9 +21,10 @@
 }
 
 .page__header {
-  padding: 20px 0;
+  padding: 8px 0;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: $bg-color-2;;
+  background-color: $bg-color-2;
+  z-index: 2;
 }

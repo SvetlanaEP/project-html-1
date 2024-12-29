@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+.privacy-link {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -53,13 +57,18 @@
   }
 }
 .advantages__image {
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .advantages__content {
   display: flex;
   flex-direction: column;
+  gap: 40px;
   justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
 }
 @media (max-width: 767px) {
   .advantages__content {
@@ -88,18 +97,20 @@
 .advantages__item {
   display: flex;
   gap: 16px;
-  font-size: 24px;
+  font-size: 12px;
   padding: 18px 0;
   line-height: 1.2;
 }
 @media (min-width: 768px) {
   .advantages__item {
     padding: 0 0 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1280px) {
   .advantages__item {
     padding: 0 0 40px;
+    font-size: 24px;
   }
 }
 .advantages__item + .advantages__item {
@@ -152,6 +163,7 @@
 
 .container {
   width: 100%;
+  padding: 0 20px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -264,10 +276,16 @@
 }
 
 .form-field__input {
-  padding: 14px 38px;
+  padding: 8px 16px;
   box-sizing: border-box;
   width: 100%;
-  font-size: 24px;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .form-field__input {
+    padding: 14px 38px;
+    font-size: 24px;
+  }
 }
 
 .form__agree {
@@ -278,6 +296,12 @@
   color: white;
   background: black;
   width: 100%;
+  border: 1px solid black;
+}
+.form__button:hover {
+  color: black;
+  background: transparent;
+  border-color: black;
 }
 
 .form__button-group {
@@ -285,7 +309,7 @@
   gap: 32px;
 }
 
-.form-modal {
+.modal {
   display: none;
   box-sizing: border-box;
   width: 60%;
@@ -295,14 +319,22 @@
   left: 20%;
   z-index: 10;
 }
+@media (max-width: 767px) {
+  .modal {
+    width: 100%;
+    padding: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+}
 
-.form-modal__send {
+.modal__send {
   height: 80px;
   border: 1px solid #000000;
   width: 100px;
 }
 
-.form-modal__closed {
+.modal__closed {
   height: 80px;
   border: 1px solid #000000;
   width: 100px;
@@ -310,16 +342,16 @@
 
 .logo {
   display: flex;
-  gap: 24px;
-  height: 58px;
+  gap: 16px;
+  height: 32px;
   align-items: center;
   box-sizing: border-box;
   color: #FFF;
-  text-align: center;
-  font-size: 36px;
+  text-align: left;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 54px */
+  line-height: 150%;
   letter-spacing: 1.08px;
   text-transform: uppercase;
   cursor: pointer;
@@ -332,6 +364,28 @@
 }
 .logo img {
   display: block;
+}
+.logo svg {
+  height: 32px;
+  width: 32px;
+}
+@media (min-width: 768px) {
+  .logo svg {
+    height: 58px;
+    width: 58px;
+  }
+}
+@media (min-width: 768px) {
+  .logo {
+    font-size: 24px;
+    gap: 24px;
+    height: 58px;
+  }
+}
+@media (min-width: 1280px) {
+  .logo {
+    font-size: 36px;
+  }
 }
 
 .main-nav {
@@ -364,7 +418,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  margin-top: 18px;
+  margin-top: 8px;
   width: 24px;
   height: 18px;
 }
@@ -452,11 +506,12 @@
 }
 
 .page__header {
-  padding: 20px 0;
+  padding: 8px 0;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #222;
+  z-index: 2;
 }
 
 .page-footer__link {
@@ -474,6 +529,13 @@
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .page-footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .page-footer__wrapper > div {
   align-content: center;
@@ -486,11 +548,11 @@
   padding-top: 108px;
   color: #ffffff;
   text-align: center;
-  max-height: 100vh;
   background-color: #222;
 }
 @media (min-width: 768px) {
   .promo {
+    max-height: 100vh;
     margin-bottom: 0;
     color: #ffffff;
     text-align: left;
@@ -508,16 +570,21 @@
 .promo__content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   margin-bottom: 48px;
   align-items: center;
 }
 @media (min-width: 768px) {
   .promo__content {
     justify-content: end;
-    gap: 50px;
+    gap: 32px;
     align-items: start;
     max-width: 660px;
+  }
+}
+@media (min-width: 1280px) {
+  .promo__content {
+    gap: 50px;
   }
 }
 
@@ -552,7 +619,7 @@
 }
 @media (min-width: 768px) {
   .promo__text {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
@@ -591,8 +658,19 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.2;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .promo__list {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .promo__list {
+    font-size: 24px;
+  }
 }
 
 .promo__item {
@@ -604,7 +682,7 @@
 
 .site-menu {
   font-family: "Oswald", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
@@ -616,7 +694,7 @@
   .site-menu:not(.site-menu--footer) {
     position: absolute;
     z-index: 2;
-    background-color: rgb(40, 40, 41);
+    background-color: #222;
     width: 100%;
     left: 0;
     top: 58px;
@@ -636,7 +714,7 @@
 
 .site-menu--footer {
   display: flex;
-  gap: 36px;
+  gap: 16px;
   justify-content: center;
 }
 
@@ -672,12 +750,72 @@
   }
 }
 
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slider__image {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider__button--prev {
+  left: 10px;
+}
+
+.slider__button--next {
+  right: 10px;
+}
+
+.slider__heading {
+  font-size: 16px;
+  padding: 20px;
+  display: block;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .social__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 32px;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .social__list {
+    gap: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .social__list {
+    gap: 32px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
