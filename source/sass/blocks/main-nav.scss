@@ -5,6 +5,7 @@
 .main-nav__bar {
   display: flex;
   padding: 0 16px;
+  justify-content: space-between;
 
   @media (max-width: $only-mobile-width) {
     position: relative;
@@ -15,12 +16,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 50%;
+    width: 48%;
   }
-}
-
-.main-nav__menu {
-  margin: 0;
 }
 
 .main-nav__toggle {

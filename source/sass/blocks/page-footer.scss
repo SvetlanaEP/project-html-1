@@ -1,0 +1,26 @@
+.page-footer {
+  &__link {
+    color: $color-link;
+  }
+}
+
+.page-footer__content {
+  padding: 43px 0 60px 0;
+}
+
+.page-footer__button {
+  width: 160px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    align-content: center;
+  }
+
+  &+& {
+    margin-top: 24px;
+  }
+}

@@ -32,7 +32,7 @@
     justify-content: end;
     gap: 50px;
     align-items: start;
-    max-width: 540px;
+    max-width: 660px;
   }
 }
 
@@ -75,8 +75,9 @@
 
 .promo__image {
   margin: 0 auto;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-height: 100vh;
 
   @media (min-width: $desktop-width) {
     margin-top: -128px;
@@ -104,7 +105,8 @@
 }
 
 .promo__item {
-  & + & {
-    margin-top: 24px;
-  }
+  display: flex;
+  gap: 16px;
+  align-items: center;
+padding: 12px 0;
 }

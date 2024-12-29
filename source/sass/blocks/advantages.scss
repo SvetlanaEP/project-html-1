@@ -1,8 +1,9 @@
 .advantages {
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 3000px;
 
   @media (min-width: $tablet-width) {
     display: grid;
