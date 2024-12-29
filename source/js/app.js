@@ -16,17 +16,27 @@ navToggle.addEventListener('click', function () {
   }
 });
 
+function openModal(modal) {
+  bodyTeg.style.overflow = 'hidden';
+  modal.style.display = 'block';
+  document.querySelector('.overflow').classList.add('overflow--open');
+}
+
+function closeModal(modal) {
+  bodyTeg.style.overflow = 'auto';
+  modal.style.display = 'none';
+  document.querySelector('.overflow').classList.remove('overflow--open');
+}
+
 let orderButtonList = document.querySelectorAll('.button--order');
 let modalCallback = document.querySelector('.modal--form');
 
 orderButtonList.forEach((buttonSend) => {
  buttonSend.addEventListener('click', () => {
-    bodyTeg.style.overflow = 'hidden';
-    modalCallback.style.display = 'block';
-    document.querySelector('.overflow').classList.add('overflow--open');
+   openModal(modalCallback)
   })
 })
-
+/*
 let privacyButtonList = document.querySelectorAll('.privacy-link');
 let modalPrivacy = document.querySelector('.modal--privacy');
 
@@ -38,16 +48,13 @@ privacyButtonList.forEach((button) => {
     modalPrivacy.style.display = 'block';
     document.querySelector('.overflow').classList.add('overflow--open');
   })
-})
+})*/
 
 let closeButton = modalCallback.querySelector('.modal__closed')
 
 closeButton.addEventListener('click', () => {
-  bodyTeg.style.overflow = 'auto';
-  modalCallback.style.display = 'none';
-  document.querySelector('.overflow').classList.remove('overflow--open');
+  closeModal(modalCallback)
 })
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll(".site-menu__item");

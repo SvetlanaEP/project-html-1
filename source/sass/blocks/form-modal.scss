@@ -5,9 +5,10 @@
 
   width: 60%;
   margin: 0 auto;
+  padding: 0;
 
   position: fixed;
-  top: 10vh;
+  top: 5vh;
   left: 20%;
   z-index: 10;
 
@@ -20,13 +21,18 @@
 }
 
 .modal__send {
-  height: 80px;
   border: 1px solid #000000;
-  width: 100px;
+  min-width: 100px;
+  width: auto;
 }
 
 .modal__closed {
-  height: 80px;
   border: 1px solid #000000;
-  width: 100px;
+  min-width: 100px;
+  width: auto;
+
+  &:hover {
+    background: #222;
+    opacity: 0.8;
+  }
 }

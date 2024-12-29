@@ -2,7 +2,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
+
+  @media (min-width: $desktop-width) {
+    gap: 24px;
+  }
+
+  @media (min-width: $max-width) {
+    gap: 32px;
+  }
 }
 
 .form-section {
@@ -43,17 +51,18 @@
   background-color: $color-white;
   color: $color-black;
 
-  padding: 24px 48px;
+  padding: 16px 24px;
   border-radius: 8px;
   box-sizing: border-box;
+  max-height: 90vh;
 
   @media (min-width: $desktop-width) {
-    padding: 48px 88px;
+    padding: 32px 48px;
     border-radius: 16px;
   }
 
   @media (min-width: $max-width) {
-    padding: 70px 130px;
+    padding: 64px 64px;
     border-radius: 30px;
   }
 
@@ -66,10 +75,14 @@
 .form__fields {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+   gap: 16px;
+  }
 
 }
 
