@@ -1,0 +1,25 @@
+.form-modal {
+  display: none;
+
+  box-sizing: border-box;
+
+  width: 60%;
+  margin: 0 auto;
+
+  position: fixed;
+  top: 10vh;
+  left: 20%;
+  z-index: 10;
+}
+
+.form-modal__send {
+  height: 80px;
+  border: 1px solid #000000;
+  width: 100px;
+}
+
+.form-modal__closed {
+  height: 80px;
+  border: 1px solid #000000;
+  width: 100px;
+}

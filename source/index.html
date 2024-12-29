@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="./img/favicon/180.png">
   </head>
   <body class="page__body">
+  <div class="overflow"></div>
 <header class="page__header page-header">
   <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs container">
     <div class="main-nav__bar">
@@ -128,7 +129,7 @@
             </li>
           </ul>
 
-          <button class="button promo__button" type="button">
+          <button class="button promo__button button--order" type="button">
             Order
           </button>
         </div>
@@ -143,37 +144,69 @@
     <h2 class="visually-hidden">Our advantages</h2>
     <div class="advantages__img-container">
       <picture>
-        <source media="(min-width: 1280px)" srcset="./img/header-img.jpg">
-        <source media="(min-width: 767px)" srcset="./img/header-img.jpg">
-        <img class="advantages__image" src="img/header-img.jpg" width="763" height="1009" alt="Изображение">
+
+        <img class="advantages__image" src="img/img-1.jpg" width="736" height="1011" alt="Изображение">
       </picture>
     </div>
 
     <div class="advantages__content">
       <ul class="advantages__list">
         <li class="advantages__item">
-          <strong> Professional Equipment </strong> — using the latest cameras and lenses for high-quality shots.
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+          <span>
+            <strong> Professional Equipment </strong> — using the latest cameras and lenses for high-quality shots.
+          </span>
+
         </li>
         <li class="advantages__item">
-          <strong> Personalized Approach </strong>— creating unique concepts and styles for each photoshoot.
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+          <span>
+            <strong> Personalized Approach </strong>— creating unique concepts and styles for each photoshoot.
+          </span>
         </li>
         <li class="advantages__item">
-          <strong> Extensive Experience </strong> — over 10 years in photography with a wide range of projects.
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+          <span>
+            <strong> Extensive Experience </strong> — over 10 years in photography with a wide range of projects.
+          </span>
+
         </li>
         <li class="advantages__item">
-          <strong> Flexibility and Convenience </strong> — shoots in the studio, on location, or anywhere convenient for the client.
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+          <span>
+            <strong> Flexibility and Convenience </strong> — shoots in the studio, on location, or anywhere convenient for the client.
+          </span>
         </li>
       </ul>
-      <button class="button advantages__button" type="button">
+      <button class="button advantages__button button--order" type="button">
         Order
       </button>
     </div>
 
     <div class="advantages__img-container">
       <picture>
-        <source media="(min-width: 1280px)" srcset="./img/header-img.jpg">
-        <source media="(min-width: 767px)" srcset="./img/header-img.jpg">
-        <img class="advantages__image" src="img/header-img.jpg" width="763" height="1009" alt="Изображение">
+
+        <img class="advantages__image" src="img/img-2.jpg" width="736" height="1011" alt="Изображение">
       </picture>
     </div>
 
@@ -182,7 +215,7 @@
   <section id="order" class="page-main__form form-section container">
     <h2 class="visually-hidden">Form</h2>
     <div class="form__wrapper">
-      <h3 class="form__heading">Consectetur sed do eiusmod</h3>
+      <h3 class="form__heading">Request a Callback</h3>
 
       <form class="form__container form">
         <ul class="form__fields">
@@ -202,11 +235,13 @@
             </label>
           </li>
         </ul>
+        <button class="button form__button" type="button">
+          Send
+        </button>
       </form>
 
     </div>
   </section>
-
 
 </main>
 
@@ -214,7 +249,7 @@
 
   <section class="page-footer__footer nav-footer">
     <ul class="nav-footer__menu site-menu site-menu--footer">
-      <li  class="site-menu__item site-menu__item--current">
+      <li  class="site-menu__item">
         <a class="site-menu__link" href="#main">
           Main
         </a>
@@ -238,7 +273,7 @@
       <div class="main-nav__logo logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58" width="58" height="58">
           <!-- Outer circle (lens) -->
-          <circle cx="29" cy="29" r="28" fill="none" stroke="#000" stroke-width="2" />
+          <circle cx="29" cy="29" r="28" fill="none" stroke="#fff" stroke-width="2" />
           <!-- Aperture blades -->
           <path d="M29,29 L42,17 A20,20 0 0,1 46,29 Z" fill="#666" />
           <path d="M29,29 L46,29 A20,20 0 0,1 42,42 Z" fill="#999" />
@@ -358,7 +393,7 @@
         </ul>
 
       </div>
-      <button class="button page-footer__button" type="button">
+      <button class="button page-footer__button button--order" type="button">
         Order
       </button>
     </div>
@@ -384,6 +419,45 @@
     </div>
   </section>
 </footer>
+
+<div  class="form-section form-modal">
+  <h2 class="visually-hidden">Form</h2>
+  <div class="form__wrapper">
+    <h3 class="form__heading">Request a Callback</h3>
+
+    <form class="form__container form">
+      <ul class="form__fields">
+        <li class="form__field form-field">
+          <label>
+            <input class="form-field__input" name="name" type="text" placeholder="Name" required>
+          </label>
+        </li>
+        <li class="form__field form-field">
+          <label>
+            <input class="form-field__input" name="phone" type="tel" placeholder="Phone" required>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="form__agree" type="checkbox" value="ok" required=""> I accept Privacy policy
+          </label>
+        </li>
+      </ul>
+      <div class="form__button-group">
+        <button class="button form__button form__button--modal form-modal__send" type="button">
+          Send
+        </button>
+        <button class="button form-modal__closed" type="button">
+          <span>Closed </span>
+        </button>
+      </div>
+
+
+    </form>
+
+
+  </div>
+</div>
 
   <script src="./js/app.min.js"></script>
   </body>

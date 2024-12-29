@@ -1,13 +1,13 @@
 .promo {
-  margin-top: 108px ;
+  padding-top: 108px ;
   color: $color-white;
   text-align: center;
-  height: auto;
+  max-height: 100vh;
+  background-color: $bg-color-2;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     color: $color-white;
-    background: transparent;
     text-align: left;
   }
 }
@@ -78,6 +78,7 @@
   width: auto;
   height: auto;
   max-height: 100vh;
+  max-width: 100%;
 
   @media (min-width: $desktop-width) {
     margin-top: -128px;
