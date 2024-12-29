@@ -1,16 +1,9 @@
 @font-face {
-  font-family: "Oswald";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-}
-@font-face {
-  font-family: "Oswald";
+  font-family: "Prata";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  src: url("../fonts/prataRegular.ttf") format("truetype");
 }
 .overflow--open {
   position: fixed;
@@ -127,7 +120,7 @@
   display: inline-block;
   padding: 11px 0;
   text-align: center;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Prata", Arial, sans-serif;
   font-size: 24px;
   line-height: 1;
   color: #000000;
@@ -591,7 +584,7 @@
 .promo__heading {
   display: block;
   margin: 0;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Prata", Arial, sans-serif;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
@@ -611,7 +604,7 @@
 
 .promo__text {
   margin: 0;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Prata", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -681,7 +674,7 @@
 }
 
 .site-menu {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Prata", Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   text-align: center;
